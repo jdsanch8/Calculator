@@ -22,7 +22,7 @@ public class Calculator {
 	 * @return the value for total
 	 */
 	public int getTotal () {
-		return 0;
+		return total;
 	}
 	
 	/**
@@ -30,7 +30,7 @@ public class Calculator {
 	 * @param value number being added to total
 	 */
 	public void add (int value) {
-		
+		total = total + value;
 	}
 	
 	/**
@@ -38,7 +38,7 @@ public class Calculator {
 	 * @param value number being subtracted from total
 	 */
 	public void subtract (int value) {
-		
+		total = total - value;
 	}
 	
 	/**
@@ -46,7 +46,7 @@ public class Calculator {
 	 * @param value number to be multiplied by
 	 */
 	public void multiply (int value) {
-		
+		total = total * value;
 	}
 	
 	/**
@@ -54,7 +54,10 @@ public class Calculator {
 	 * @param value number to be divided by
 	 */
 	public void divide (int value) {
-		
+		if(value == 0)
+			total = 0;
+		else
+			total = total / value;
 	}
 	
 	/**
