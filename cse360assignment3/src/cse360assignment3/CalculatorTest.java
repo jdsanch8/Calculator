@@ -60,7 +60,17 @@ public class CalculatorTest {
 	@Test
 	public void testGetHistory() {
 		Calculator calc = new Calculator();			
-		assertEquals("", calc.getHistory());		
+		assertEquals("0", calc.getHistory());		
+	}
+	
+	@Test
+	public void testGetHistoryTwo() {
+		Calculator calc = new Calculator();	
+		calc.add(5);
+		calc.subtract(2);
+		calc.multiply(3);
+		calc.divide(0);
+		assertEquals("0 + 5 - 2 * 3 / 0", calc.getHistory());		
 	}
 
 }
