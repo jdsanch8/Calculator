@@ -9,20 +9,20 @@ public class CalculatorTest {
 	@Test
 	public void testCalculator() {
 		Calculator calc = new Calculator();
-		assertNotNull(calc);
+		assertNotNull(calc);				//Ensures object is actually created
 	}
 
 	@Test
 	public void testGetTotal() {
 		Calculator calc = new Calculator();
-		assertEquals(0, calc.getTotal());
+		assertEquals(0, calc.getTotal()); //Ensures it's grabbing total
 	}
 
 	@Test
 	public void testAdd() {
 		Calculator calc = new Calculator();
 		calc.add(15);
-		assertEquals(15, calc.getTotal());
+		assertEquals(15, calc.getTotal()); //Ensures it's adding correctly
 	}
 
 	@Test
@@ -30,7 +30,7 @@ public class CalculatorTest {
 		Calculator calc = new Calculator();
 		calc.add(15);
 		calc.subtract(10);
-		assertEquals(5, calc.getTotal());
+		assertEquals(5, calc.getTotal()); //Ensures it subtracts correctly
 	}
 
 	@Test
@@ -38,7 +38,7 @@ public class CalculatorTest {
 		Calculator calc = new Calculator();
 		calc.add(15);
 		calc.multiply(10);
-		assertEquals(150, calc.getTotal());
+		assertEquals(150, calc.getTotal()); //Ensures it multiplies correctly
 	}
 
 	@Test
@@ -46,7 +46,7 @@ public class CalculatorTest {
 		Calculator calc = new Calculator();
 		calc.add(27);
 		calc.divide(5);
-		assertEquals(5, calc.getTotal());
+		assertEquals(5, calc.getTotal()); //Ensures it does integer division
 	}
 	
 	@Test
@@ -54,13 +54,13 @@ public class CalculatorTest {
 		Calculator calc = new Calculator();
 		calc.add(27);
 		calc.divide(0);
-		assertEquals(0, calc.getTotal());
+		assertEquals(0, calc.getTotal()); //Allows for divide by zero
 	}
 
 	@Test
 	public void testGetHistory() {
 		Calculator calc = new Calculator();			
-		assertEquals("0", calc.getHistory());		
+		assertEquals("0", calc.getHistory()); //Ensures History works for no actions		
 	}
 	
 	@Test
@@ -70,7 +70,7 @@ public class CalculatorTest {
 		calc.subtract(2);
 		calc.multiply(3);
 		calc.divide(0);
-		assertEquals("0 + 5 - 2 * 3 / 0", calc.getHistory());		
+		assertEquals("0 + 5 - 2 * 3 / 0", calc.getHistory()); //Ensures formatting is good for every action		
 	}
 
 }
